@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="dist/index.js" type="module"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="/global.css" /> -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Document</title>
   <style>
     #list {
@@ -14,10 +16,15 @@
   </style>
 </head>
 <body>
-  <ul id="list"></ul>
-  <form id="new-task-form">
-    <input type="text" id="new-task-title">
-    <button type="submit">Add</button>
-  </form>
+  <div class="h-screen w-screen flex justify-center items-center">
+    <div class="w-[500px] h-[500px] bg-blue-300 mx-auto flex flex-col justify-center items-center gap-2 px-2">
+      <span class="font-bold text-xl">Todo-List App</span>
+      <ul id="list" class="w-full h-[300px] flex flex-col gap-2 overflow-hidden overflow-y-visible"></ul>
+      <form id="new-task-form" class="w-full flex flex-row justify-between gap-2">
+        <input type="text" id="new-task-title" class="w-full">
+        <button class="bg-white px-3 py-1 font-bold" type="submit">Add</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

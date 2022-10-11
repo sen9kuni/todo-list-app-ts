@@ -34,7 +34,9 @@ form?.addEventListener("submit", e => {
 
 function addListItem(task: Task) {
   const item = document.createElement("li")
+  item.className = 'px-2 py-1 border-2 bg-white border-black w-full'
   const label = document.createElement("label")
+  label.className =' flex flex-row gap-2'
   const checkbox = document.createElement("input")
   checkbox.addEventListener("change", () => {
     task.completed = checkbox.checked
